@@ -1,0 +1,185 @@
+{
+  "method": "Paired material-cluster percentile bootstrap",
+  "seed": 20261017,
+  "resamples": 100000,
+  "clusters": 36,
+  "per_cluster_per_arm_scenario": 18,
+  "trials": 5832,
+  "models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5",
+    "claude-sonnet-5-5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra"
+  ],
+  "materials": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10",
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15",
+    "M16",
+    "M17",
+    "M18",
+    "M19",
+    "M20",
+    "M21",
+    "M22",
+    "M23",
+    "M24",
+    "M25",
+    "M26",
+    "M27",
+    "M28",
+    "M29",
+    "M30"
+  ],
+  "resampling_unit": "material; all model/repeat/arm/scenario records travel together",
+  "estimand": "Difference in pooled expected-outcome rates over the observed material mix, with the six models and three repeats held together within material",
+  "interpretation": "Conditional empirical material-resampling uncertainty, not a provider/model population reliability guarantee or a correction for non-random material selection",
+  "scope": "Unified36 materials and retained5832 trials; bridge excluded; no raw or grade modifications",
+  "results": [
+    {
+      "scenario": "faithful",
+      "contrast": "B-A",
+      "difference_pp": 10.185185185185185,
+      "ci95_percentile_pp": [
+        6.172839506172839,
+        14.660493827160494
+      ],
+      "bootstrap_mean_pp": 10.18579475308642,
+      "bootstrap_se_pp": 2.1752681635173596,
+      "empirical_bootstrap_se_check": 2.1769654289607847
+    },
+    {
+      "scenario": "faithful",
+      "contrast": "C-A",
+      "difference_pp": 80.40123456790124,
+      "ci95_percentile_pp": [
+        73.30246913580247,
+        87.03703703703704
+      ],
+      "bootstrap_mean_pp": 80.39193981481482,
+      "bootstrap_se_pp": 3.5236519567222797,
+      "empirical_bootstrap_se_check": 3.5155805304126546
+    },
+    {
+      "scenario": "faithful",
+      "contrast": "C-B",
+      "difference_pp": 70.21604938271605,
+      "ci95_percentile_pp": [
+        59.876543209876544,
+        80.24691358024691
+      ],
+      "bootstrap_mean_pp": 70.20614506172839,
+      "bootstrap_se_pp": 5.2220664206857546,
+      "empirical_bootstrap_se_check": 5.215742456534227
+    },
+    {
+      "scenario": "altered",
+      "contrast": "B-A",
+      "difference_pp": 27.932098765432098,
+      "ci95_percentile_pp": [
+        25.0,
+        30.864197530864196
+      ],
+      "bootstrap_mean_pp": 27.93638888888889,
+      "bootstrap_se_pp": 1.4874618572638265,
+      "empirical_bootstrap_se_check": 1.487995438695548
+    },
+    {
+      "scenario": "altered",
+      "contrast": "C-A",
+      "difference_pp": 31.48148148148148,
+      "ci95_percentile_pp": [
+        28.395061728395063,
+        34.5679012345679
+      ],
+      "bootstrap_mean_pp": 31.48926388888889,
+      "bootstrap_se_pp": 1.575270581296079,
+      "empirical_bootstrap_se_check": 1.5737714548125876
+    },
+    {
+      "scenario": "altered",
+      "contrast": "C-B",
+      "difference_pp": 3.549382716049383,
+      "ci95_percentile_pp": [
+        1.6975308641975309,
+        5.555555555555555
+      ],
+      "bootstrap_mean_pp": 3.5528750000000002,
+      "bootstrap_se_pp": 0.9773670821877721,
+      "empirical_bootstrap_se_check": 0.9797323536389357
+    },
+    {
+      "scenario": "insufficient_evidence",
+      "contrast": "B-A",
+      "difference_pp": 0.30864197530864196,
+      "ci95_percentile_pp": [
+        -0.46296296296296297,
+        1.0802469135802468
+      ],
+      "bootstrap_mean_pp": 0.3090570987654321,
+      "bootstrap_se_pp": 0.37382715043195214,
+      "empirical_bootstrap_se_check": 0.3744912494485863
+    },
+    {
+      "scenario": "insufficient_evidence",
+      "contrast": "C-A",
+      "difference_pp": 0.30864197530864196,
+      "ci95_percentile_pp": [
+        -0.46296296296296297,
+        1.2345679012345678
+      ],
+      "bootstrap_mean_pp": 0.3099753086419753,
+      "bootstrap_se_pp": 0.43411304328575956,
+      "empirical_bootstrap_se_check": 0.43344391837326945
+    },
+    {
+      "scenario": "insufficient_evidence",
+      "contrast": "C-B",
+      "difference_pp": 0.0,
+      "ci95_percentile_pp": [
+        -0.7716049382716049,
+        0.9259259259259259
+      ],
+      "bootstrap_mean_pp": 0.0009182098765432098,
+      "bootstrap_se_pp": 0.4375868139978177,
+      "empirical_bootstrap_se_check": 0.4364856673991034
+    }
+  ],
+  "input_sha256": {
+    "analysis/e4-slot-replacement-20261016-v1/trial-metrics.json": "05ef563c39ab65d82d218b2d5a75b9b2ea8b3fbffcd62448f34e081ae813f376",
+    "decimal_extension/experiment/run-20261017-v1/scoring-view-v3/final-analysis-v2/trial-metrics.csv": "5d1698cabd7a8e3ea90103af388f7b543371d0c96b488fb805b7e3530f942afa",
+    "decimal_extension/experiment/run-20261017-v1/scoring-view-v3/selection-and-grading-manifest.json": "c48237052ee12de3eee48699be1b256b65d16df83c3009e73356a1966e2eb434",
+    "reviews/experiment-unified-results-20261017.json": "2bef4520f92b0b2ec19536ca179b0ed093de1ae502de6f980a03cd22033e4a31",
+    "reviews/experiment-cases-20261017.json": "33198c94b90223a659c15a539efbebc1282b7192d20d3423a26d200e2cfeb95e",
+    "decimal_extension/experiment/run-20261017-v1/DECIMAL-SUPPORT-COMPLETION.json": "e3f9f045206f49d9b5c4562787a53010918557b9099b6450e0358a4215d4ceea",
+    "decimal_extension/reports/offline-20261016-v2/compatibility-report.json": "89b98a545dea30d458cb8e1425c5b50afb17d92bec8064bed9041482ea281e7e",
+    "e4_supplement/prepared-v7/manifest.json": "27ca2ffc759316f2a78030eed9c08b57c1a67b86fe3d1f794c130e985384c591",
+    "e4_supplement/routed-v3/run-config.json": "002872b3b1bafe98db65aaed83f1b86cec6d81ee488acadc96985fe635cb0de6",
+    "decimal_extension/experiment/run-20261017-v1/protocol.json": "8b863536c0be46acf3f3601ac479e09876cc75cdeca2f9f9f451ebbfd208dc91",
+    "decimal_extension/integrity.py": "072216ef1498856493fc080f2feda864712796936e4131c0676147238cbd8f1d",
+    "decimal_extension/verification.py": "4d50772dd8e067dfc2400edbb3ece499220c011dc29abbeb7334244599e94934",
+    "decimal_extension/profile.py": "b770cf8980a5721f04d4f863e695b4a40d3783383febe289d70d14232350b48f",
+    "vendor/canon/canon.py": "48d6ad1c92a292b1979ef05bc3010007ba0120e5da0d3be5f3f4f9b77902eb8d"
+  },
+  "script_sha256": "a3f4704bf0d164aad08edcd266f59e22b488ccf68ae0f0b6436d9ecd8ee3e8df"
+}

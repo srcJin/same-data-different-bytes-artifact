@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the paper and the release version used in your work."
+title: "Same Data, Different Bytes: Serialization-Invariant Integrity Checks for Agent-Published Datasets"
+authors:
+  - family-names: Gao
+    given-names: Jin
+  - family-names: Clark
+    given-names: Maura
+version: 1.0.0
+date-released: 2026-11-05
+repository-code: "https://github.com/srcJin/same-data-different-bytes-artifact"
+type: software
+license: Apache-2.0

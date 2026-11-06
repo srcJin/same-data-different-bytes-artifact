@@ -1,0 +1,332 @@
+{
+  "source_files": {
+    "e4_supplement/materials.py": "cb3855cae18fdead169d5e118dd28ea07c332769013ea5bcc4cd30b1979e3381",
+    "decimal_extension/experiment/materials.py": "7954ffba435a54571c6d4848fb4c557ff9d698f2ef9031e2faa1c32e766acfd8"
+  },
+  "records": [
+    {
+      "id": "M01",
+      "family": "baseline_controls",
+      "question": "How many bolts are in the North depot stock record?",
+      "reference": "{\"depot\":\"North\",\"stock\":{\"bolts\":128,\"washers\":73}}",
+      "equivalent": "{\"depot\":\"North\",\"stock\":{\"bolts\":128,\"washers\":73}}",
+      "altered": "{\"depot\":\"North\",\"stock\":{\"bolts\":129,\"washers\":73}}",
+      "unavailable_reference_candidate": "{\"depot\":\"North\",\"stock\":{\"bolts\":128,\"washers\":73}}"
+    },
+    {
+      "id": "M02",
+      "family": "baseline_controls",
+      "question": "What is the capacity of BIO201?",
+      "reference": "{\"courses\":[{\"code\":\"BIO201\",\"capacity\":36},{\"code\":\"MAT110\",\"capacity\":24}]}",
+      "equivalent": "{\n  \"courses\": [\n    {\n      \"code\": \"BIO201\",\n      \"capacity\": 36\n    },\n    {\n      \"code\": \"MAT110\",\n      \"capacity\": 24\n    }\n  ]\n}",
+      "altered": "{\n  \"courses\": [\n    {\n      \"code\": \"BIO201\",\n      \"capacity\": 39\n    },\n    {\n      \"code\": \"MAT110\",\n      \"capacity\": 24\n    }\n  ]\n}",
+      "unavailable_reference_candidate": "{\n  \"courses\": [\n    {\n      \"code\": \"BIO201\",\n      \"capacity\": 36\n    },\n    {\n      \"code\": \"MAT110\",\n      \"capacity\": 24\n    }\n  ]\n}"
+    },
+    {
+      "id": "M03",
+      "family": "baseline_controls",
+      "question": "How many MWh of generation are recorded for West grid in the morning interval?",
+      "reference": "{\"grid\":\"West\",\"generation_mwh\":17,\"reserve_mwh\":9,\"interval\":\"morning\"}",
+      "equivalent": "{\"interval\":\"morning\",\"reserve_mwh\":9,\"generation_mwh\":17,\"grid\":\"West\"}",
+      "altered": "{\"interval\":\"morning\",\"reserve_mwh\":9,\"generation_mwh\":19,\"grid\":\"West\"}",
+      "unavailable_reference_candidate": "{\"interval\":\"morning\",\"reserve_mwh\":9,\"generation_mwh\":17,\"grid\":\"West\"}"
+    },
+    {
+      "id": "M04",
+      "family": "integer_lexemes",
+      "question": "How many crates are recorded for Cedar warehouse?",
+      "reference": "{\"warehouse\":\"Cedar\",\"crates\":64,\"reserved\":11}",
+      "equivalent": "{\"warehouse\":\"Cedar\",\"crates\":64.0,\"reserved\":11.0}",
+      "altered": "{\"warehouse\":\"Cedar\",\"crates\":65.0,\"reserved\":11.0}",
+      "unavailable_reference_candidate": "{\"warehouse\":\"Cedar\",\"crates\":64.0,\"reserved\":11.0}"
+    },
+    {
+      "id": "M05",
+      "family": "integer_lexemes",
+      "question": "How many observations were accepted at Hill station?",
+      "reference": "{\"station\":{\"name\":\"Hill\",\"observations\":{\"accepted\":1200,\"rejected\":25}}}",
+      "equivalent": "{\"station\":{\"name\":\"Hill\",\"observations\":{\"accepted\":1200e0,\"rejected\":25e0}}}",
+      "altered": "{\"station\":{\"name\":\"Hill\",\"observations\":{\"accepted\":12000e0,\"rejected\":25e0}}}",
+      "unavailable_reference_candidate": "{\"station\":{\"name\":\"Hill\",\"observations\":{\"accepted\":1200e0,\"rejected\":25e0}}}"
+    },
+    {
+      "id": "M06",
+      "family": "integer_lexemes",
+      "question": "How many units are pending in the ledger?",
+      "reference": "{\"ledger\":[{\"label\":\"adjustment\",\"units\":-7},{\"label\":\"pending\",\"units\":0}]}",
+      "equivalent": "{\"ledger\":[{\"label\":\"adjustment\",\"units\":-7.0},{\"label\":\"pending\",\"units\":-0.0}]}",
+      "altered": "{\"ledger\":[{\"label\":\"adjustment\",\"units\":-7.0},{\"label\":\"pending\",\"units\":1.0}]}",
+      "unavailable_reference_candidate": "{\"ledger\":[{\"label\":\"adjustment\",\"units\":-7.0},{\"label\":\"pending\",\"units\":-0.0}]}"
+    },
+    {
+      "id": "M07",
+      "family": "unicode_values",
+      "question": "What is the site name in the record?",
+      "reference": "{\"site\":\"Caf\u00e9\",\"district\":\"central\",\"capacity\":31}",
+      "equivalent": "{\"site\":\"Cafe\u0301\",\"district\":\"central\",\"capacity\":31}",
+      "altered": "{\"site\":\"Cafe\",\"district\":\"central\",\"capacity\":31}",
+      "unavailable_reference_candidate": "{\"site\":\"Cafe\u0301\",\"district\":\"central\",\"capacity\":31}"
+    },
+    {
+      "id": "M08",
+      "family": "unicode_values",
+      "question": "What is the instrument label?",
+      "reference": "{\"instrument\":{\"label\":\"\u1e69ensor\",\"calibration\":\"ready\"},\"channels\":[2,4,6]}",
+      "equivalent": "{\"instrument\":{\"label\":\"s\u0323\u0307ensor\",\"calibration\":\"ready\"},\"channels\":[2,4,6]}",
+      "altered": "{\"instrument\":{\"label\":\"sensor\",\"calibration\":\"ready\"},\"channels\":[2,4,6]}",
+      "unavailable_reference_candidate": "{\"instrument\":{\"label\":\"s\u0323\u0307ensor\",\"calibration\":\"ready\"},\"channels\":[2,4,6]}"
+    },
+    {
+      "id": "M09",
+      "family": "unicode_values",
+      "question": "What is the name of museum branch B?",
+      "reference": "{\"branches\":[{\"code\":\"A\",\"name\":\"Z\u00fcrich\"},{\"code\":\"B\",\"name\":\"\uac00\ub098\"}],\"edition\":3,\"directory\":\"museum\"}",
+      "equivalent": "{\"branches\":[{\"code\":\"A\",\"name\":\"Zu\u0308rich\"},{\"code\":\"B\",\"name\":\"\u1100\u1161\u1102\u1161\"}],\"edition\":3,\"directory\":\"museum\"}",
+      "altered": "{\"branches\":[{\"code\":\"A\",\"name\":\"Zu\u0308rich\"},{\"code\":\"B\",\"name\":\"\u1100\u1161\u1103\u1161\"}],\"edition\":3,\"directory\":\"museum\"}",
+      "unavailable_reference_candidate": "{\"branches\":[{\"code\":\"A\",\"name\":\"Zu\u0308rich\"},{\"code\":\"B\",\"name\":\"\u1100\u1161\u1102\u1161\"}],\"edition\":3,\"directory\":\"museum\"}"
+    },
+    {
+      "id": "M10",
+      "family": "unicode_keys",
+      "question": "What capacit\u00e9 is recorded for Tram T4?",
+      "reference": "{\"capacit\u00e9\":42,\"vehicle\":\"Tram T4\",\"in_service\":true}",
+      "equivalent": "{\"capacite\u0301\":42,\"vehicle\":\"Tram T4\",\"in_service\":true}",
+      "altered": "{\"capacite\u0301\":43,\"vehicle\":\"Tram T4\",\"in_service\":true}",
+      "unavailable_reference_candidate": "{\"capacite\u0301\":42,\"vehicle\":\"Tram T4\",\"in_service\":true}"
+    },
+    {
+      "id": "M11",
+      "family": "unicode_keys",
+      "question": "What is the count in the hospital ward's \u00e9quipe record?",
+      "reference": "{\"ward\":{\"\u00e9quipe\":{\"count\":18},\"unit\u00e9\":\"acute\"},\"beds\":24}",
+      "equivalent": "{\"ward\":{\"e\u0301quipe\":{\"count\":18},\"unite\u0301\":\"acute\"},\"beds\":24}",
+      "altered": "{\"ward\":{\"e\u0301quipe\":{\"count\":18},\"unite\":\"acute\"},\"beds\":24}",
+      "unavailable_reference_candidate": "{\"ward\":{\"e\u0301quipe\":{\"count\":18},\"unite\u0301\":\"acute\"},\"beds\":24}"
+    },
+    {
+      "id": "M12",
+      "family": "unicode_keys",
+      "question": "What is the budget's r\u00e9sum\u00e9 value in credits?",
+      "reference": "{\"budget\":{\"r\u00e9sum\u00e9\":27,\"\u00e9cart\":3,\"ann\u00e9e\":2025},\"currency\":\"credits\"}",
+      "equivalent": "{\"budget\":{\"re\u0301sume\u0301\":27,\"e\u0301cart\":3,\"anne\u0301e\":2025},\"currency\":\"credits\"}",
+      "altered": "{\"budget\":{\"re\u0301sume\u0301\":27,\"anne\u0301e\":2025},\"currency\":\"credits\"}",
+      "unavailable_reference_candidate": "{\"budget\":{\"re\u0301sume\u0301\":27,\"e\u0301cart\":3,\"anne\u0301e\":2025},\"currency\":\"credits\"}"
+    },
+    {
+      "id": "M13",
+      "family": "json_escapes",
+      "question": "What is the office name?",
+      "reference": "{\"office\":\"\u6771\u4eac\",\"seats\":22,\"labels\":[\"\u00c5land\",\"South\"]}",
+      "equivalent": "{\"office\":\"\\u6771\\u4eac\",\"seats\":22,\"labels\":[\"\\u00c5land\",\"South\"]}",
+      "altered": "{\"office\":\"\\u4eac\\u90fd\",\"seats\":22,\"labels\":[\"\\u00c5land\",\"South\"]}",
+      "unavailable_reference_candidate": "{\"office\":\"\\u6771\\u4eac\",\"seats\":22,\"labels\":[\"\\u00c5land\",\"South\"]}"
+    },
+    {
+      "id": "M14",
+      "family": "json_escapes",
+      "question": "What build path is listed in the software manifest?",
+      "reference": "{\"manifest\":{\"path\":\"build/weekly\",\"note\":\"channel=\\\"current\\\"\\\\archive\\nindex\"},\"artifacts\":12}",
+      "equivalent": "{\"\\u006d\\u0061\\u006e\\u0069\\u0066\\u0065\\u0073\\u0074\":{\"\\u0070\\u0061\\u0074\\u0068\":\"\\u0062\\u0075\\u0069\\u006c\\u0064\\u002f\\u0077\\u0065\\u0065\\u006b\\u006c\\u0079\",\"\\u006e\\u006f\\u0074\\u0065\":\"\\u0063\\u0068\\u0061\\u006e\\u006e\\u0065\\u006c\\u003d\\u0022\\u0063\\u0075\\u0072\\u0072\\u0065\\u006e\\u0074\\u0022\\u005c\\u0061\\u0072\\u0063\\u0068\\u0069\\u0076\\u0065\\u000a\\u0069\\u006e\\u0064\\u0065\\u0078\"},\"\\u0061\\u0072\\u0074\\u0069\\u0066\\u0061\\u0063\\u0074\\u0073\":12}",
+      "altered": "{\"\\u006d\\u0061\\u006e\\u0069\\u0066\\u0065\\u0073\\u0074\":{\"\\u0070\\u0061\\u0074\\u0068\":\"\\u0062\\u0075\\u0069\\u006c\\u0064\\u002f\\u006d\\u006f\\u006e\\u0074\\u0068\\u006c\\u0079\",\"\\u006e\\u006f\\u0074\\u0065\":\"\\u0063\\u0068\\u0061\\u006e\\u006e\\u0065\\u006c\\u003d\\u0022\\u0063\\u0075\\u0072\\u0072\\u0065\\u006e\\u0074\\u0022\\u005c\\u0061\\u0072\\u0063\\u0068\\u0069\\u0076\\u0065\\u000a\\u0069\\u006e\\u0064\\u0065\\u0078\"},\"\\u0061\\u0072\\u0074\\u0069\\u0066\\u0061\\u0063\\u0074\\u0073\":12}",
+      "unavailable_reference_candidate": "{\"\\u006d\\u0061\\u006e\\u0069\\u0066\\u0065\\u0073\\u0074\":{\"\\u0070\\u0061\\u0074\\u0068\":\"\\u0062\\u0075\\u0069\\u006c\\u0064\\u002f\\u0077\\u0065\\u0065\\u006b\\u006c\\u0079\",\"\\u006e\\u006f\\u0074\\u0065\":\"\\u0063\\u0068\\u0061\\u006e\\u006e\\u0065\\u006c\\u003d\\u0022\\u0063\\u0075\\u0072\\u0072\\u0065\\u006e\\u0074\\u0022\\u005c\\u0061\\u0072\\u0063\\u0068\\u0069\\u0076\\u0065\\u000a\\u0069\\u006e\\u0064\\u0065\\u0078\"},\"\\u0061\\u0072\\u0074\\u0069\\u0066\\u0061\\u0063\\u0074\\u0073\":12}"
+    },
+    {
+      "id": "M15",
+      "family": "json_escapes",
+      "question": "What glyph is recorded for music archive label X?",
+      "reference": "{\"labels\":[{\"code\":\"X\",\"glyph\":\"\ud834\udd1e\"},{\"code\":\"Y\",\"glyph\":\"\ud801\udc00\"}],\"total\":2,\"collection\":\"music-notation\"}",
+      "equivalent": "{\"labels\":[{\"code\":\"X\",\"glyph\":\"\\ud834\\udd1e\"},{\"code\":\"Y\",\"glyph\":\"\\ud801\\udc00\"}],\"total\":2,\"collection\":\"music-notation\"}",
+      "altered": "{\"labels\":[{\"code\":\"X\",\"glyph\":\"\\ud834\\udd22\"},{\"code\":\"Y\",\"glyph\":\"\\ud801\\udc00\"}],\"total\":2,\"collection\":\"music-notation\"}",
+      "unavailable_reference_candidate": "{\"labels\":[{\"code\":\"X\",\"glyph\":\"\\ud834\\udd1e\"},{\"code\":\"Y\",\"glyph\":\"\\ud801\\udc00\"}],\"total\":2,\"collection\":\"music-notation\"}"
+    },
+    {
+      "id": "M16",
+      "family": "nested_objects",
+      "question": "How many rooms are on the first floor of the east site?",
+      "reference": "{\"region\":{\"sites\":{\"east\":{\"floors\":{\"first\":{\"rooms\":16,\"desks\":48}}}}},\"status\":\"open\"}",
+      "equivalent": "{\"status\":\"open\",\"region\":{\"sites\":{\"east\":{\"floors\":{\"first\":{\"desks\":48,\"rooms\":16}}}}}}",
+      "altered": "{\"status\":\"open\",\"region\":{\"sites\":{\"east\":{\"floors\":{\"first\":{\"desks\":48,\"rooms\":15}}}}}}",
+      "unavailable_reference_candidate": "{\"status\":\"open\",\"region\":{\"sites\":{\"east\":{\"floors\":{\"first\":{\"desks\":48,\"rooms\":16}}}}}}"
+    },
+    {
+      "id": "M17",
+      "family": "nested_objects",
+      "question": "How many assembly-line machines are listed?",
+      "reference": "{\"lines\":{\"assembly\":{\"machines\":23,\"idle\":2},\"packing\":{\"machines\":14,\"idle\":1}},\"shift\":\"day\"}",
+      "equivalent": "{\"lines\":{\"assembly\":{\"machines\":23.0,\"idle\":2.0},\"packing\":{\"machines\":14.0,\"idle\":1.0}},\"shift\":\"day\"}",
+      "altered": "{\"lines\":{\"assembly\":{\"machines\":23.0,\"idle\":2.0},\"packing\":{\"machines\":15.0,\"idle\":1.0}},\"shift\":\"day\"}",
+      "unavailable_reference_candidate": "{\"lines\":{\"assembly\":{\"machines\":23.0,\"idle\":2.0},\"packing\":{\"machines\":14.0,\"idle\":1.0}},\"shift\":\"day\"}"
+    },
+    {
+      "id": "M18",
+      "family": "nested_objects",
+      "question": "What is the accueil emergency shelter capacity?",
+      "reference": "{\"shelters\":{\"accueil\":{\"label\":\"Entr\u00e9e\",\"capacity\":26},\"annexe\":{\"label\":\"R\u00e9serve\"}},\"operator\":\"emergency-service\"}",
+      "equivalent": "{\"shelters\":{\"accueil\":{\"label\":\"Entre\u0301e\",\"capacity\":26},\"annexe\":{\"label\":\"Re\u0301serve\"}},\"operator\":\"emergency-service\"}",
+      "altered": "{\"shelters\":{\"accueil\":{\"capacity\":26},\"annexe\":{\"label\":\"Re\u0301serve\",\"secondary_label\":\"Entre\u0301e\"}},\"operator\":\"emergency-service\"}",
+      "unavailable_reference_candidate": "{\"shelters\":{\"accueil\":{\"label\":\"Entre\u0301e\",\"capacity\":26},\"annexe\":{\"label\":\"Re\u0301serve\"}},\"operator\":\"emergency-service\"}"
+    },
+    {
+      "id": "M19",
+      "family": "arrays",
+      "question": "How many items have serial R31?",
+      "reference": "{\"equipment\":[{\"serial\":\"P14\",\"count\":8},{\"serial\":\"Q09\",\"count\":13},{\"serial\":\"R31\",\"count\":5}],\"unit\":\"items\"}",
+      "equivalent": "{\"unit\":\"items\",\"equipment\":[{\"count\":8,\"serial\":\"P14\"},{\"count\":13,\"serial\":\"Q09\"},{\"count\":5,\"serial\":\"R31\"}]}",
+      "altered": "{\"unit\":\"items\",\"equipment\":[{\"count\":13,\"serial\":\"Q09\"},{\"count\":8,\"serial\":\"P14\"},{\"count\":5,\"serial\":\"R31\"}]}",
+      "unavailable_reference_candidate": "{\"unit\":\"items\",\"equipment\":[{\"count\":8,\"serial\":\"P14\"},{\"count\":13,\"serial\":\"Q09\"},{\"count\":5,\"serial\":\"R31\"}]}"
+    },
+    {
+      "id": "M20",
+      "family": "arrays",
+      "question": "How many staff are on Monday's clinical-red shift?",
+      "reference": "{\"shifts\":[{\"day\":\"Monday\",\"staff\":11},{\"day\":\"Tuesday\",\"staff\":9},{\"day\":\"Wednesday\",\"staff\":12}],\"team\":\"clinical-red\"}",
+      "equivalent": "{\"shifts\":[{\"day\":\"Monday\",\"staff\":11.0},{\"day\":\"Tuesday\",\"staff\":9.0},{\"day\":\"Wednesday\",\"staff\":12.0}],\"team\":\"clinical-red\"}",
+      "altered": "{\"shifts\":[{\"day\":\"Monday\",\"staff\":11.0},{\"day\":\"Tuesday\",\"staff\":9.0}],\"team\":\"clinical-red\"}",
+      "unavailable_reference_candidate": "{\"shifts\":[{\"day\":\"Monday\",\"staff\":11.0},{\"day\":\"Tuesday\",\"staff\":9.0},{\"day\":\"Wednesday\",\"staff\":12.0}],\"team\":\"clinical-red\"}"
+    },
+    {
+      "id": "M21",
+      "family": "arrays",
+      "question": "What observation value is recorded for Gen\u00e8ve?",
+      "reference": "{\"observations\":[{\"place\":\"Gen\u00e8ve\",\"value\":15},{\"place\":\"Malm\u00f6\",\"value\":19}],\"units\":\"count\"}",
+      "equivalent": "{\"observations\":[{\"place\":\"Gene\u0300ve\",\"value\":15},{\"place\":\"Malmo\u0308\",\"value\":19}],\"units\":\"count\"}",
+      "altered": "{\"observations\":[{\"place\":\"Gene\u0300ve\",\"value\":15},{\"place\":\"Malmo\u0308\",\"value\":19},{\"place\":\"Leeds\",\"value\":17}],\"units\":\"count\"}",
+      "unavailable_reference_candidate": "{\"observations\":[{\"place\":\"Gene\u0300ve\",\"value\":15},{\"place\":\"Malmo\u0308\",\"value\":19}],\"units\":\"count\"}"
+    },
+    {
+      "id": "M22",
+      "family": "types",
+      "question": "What is the asset count, retaining its JSON value type?",
+      "reference": "{\"asset\":{\"code\":\"007\",\"count\":7},\"batch\":\"0042\"}",
+      "equivalent": "{\n  \"asset\": {\n    \"code\": \"007\",\n    \"count\": 7\n  },\n  \"batch\": \"0042\"\n}",
+      "altered": "{\n  \"asset\": {\n    \"code\": \"007\",\n    \"count\": \"7\"\n  },\n  \"batch\": \"0042\"\n}",
+      "unavailable_reference_candidate": "{\n  \"asset\": {\n    \"code\": \"007\",\n    \"count\": 7\n  },\n  \"batch\": \"0042\"\n}"
+    },
+    {
+      "id": "M23",
+      "family": "types",
+      "question": "What is the enabled value of the visitor-access policy, retaining its JSON value type?",
+      "reference": "{\"config\":{\"enabled\":true,\"pending\":null,\"comment\":\"\",\"limit\":20},\"policy\":\"visitor-access\",\"revision\":\"02\"}",
+      "equivalent": "{\"revision\":\"02\",\"policy\":\"visitor-access\",\"config\":{\"limit\":20,\"comment\":\"\",\"pending\":null,\"enabled\":true}}",
+      "altered": "{\"revision\":\"02\",\"policy\":\"visitor-access\",\"config\":{\"limit\":20,\"comment\":\"\",\"enabled\":true}}",
+      "unavailable_reference_candidate": "{\"revision\":\"02\",\"policy\":\"visitor-access\",\"config\":{\"limit\":20,\"comment\":\"\",\"pending\":null,\"enabled\":true}}"
+    },
+    {
+      "id": "M24",
+      "family": "types",
+      "question": "What is the exact amount string for the basic item?",
+      "reference": "{\"rates\":[{\"item\":\"basic\",\"amount\":\"1.50\"},{\"item\":\"premium\",\"amount\":\"2.75\"}],\"currency\":\"units\"}",
+      "equivalent": "{\n  \"rates\": [\n    {\n      \"item\": \"basic\",\n      \"amount\": \"1.50\"\n    },\n    {\n      \"item\": \"premium\",\n      \"amount\": \"2.75\"\n    }\n  ],\n  \"currency\": \"units\"\n}",
+      "altered": "{\n  \"rates\": [\n    {\n      \"item\": \"basic\",\n      \"amount\": \"1.5\"\n    },\n    {\n      \"item\": \"premium\",\n      \"amount\": \"2.75\"\n    }\n  ],\n  \"currency\": \"units\"\n}",
+      "unavailable_reference_candidate": "{\n  \"rates\": [\n    {\n      \"item\": \"basic\",\n      \"amount\": \"1.50\"\n    },\n    {\n      \"item\": \"premium\",\n      \"amount\": \"2.75\"\n    }\n  ],\n  \"currency\": \"units\"\n}"
+    },
+    {
+      "id": "M25",
+      "family": "non_target_edits",
+      "question": "How many crates are in harvest lot A1 at South farm?",
+      "reference": "{\"harvest\":[{\"lot\":\"A1\",\"crates\":53},{\"lot\":\"B2\",\"crates\":68}],\"farm\":\"South\"}",
+      "equivalent": "{\"harvest\":[{\"lot\":\"A1\",\"crates\":53e0},{\"lot\":\"B2\",\"crates\":68e0}],\"farm\":\"South\"}",
+      "altered": "{\"harvest\":[{\"lot\":\"A1\",\"crates\":53e0},{\"lot\":\"B2\",\"crates\":69e0}],\"farm\":\"South\"}",
+      "unavailable_reference_candidate": "{\"harvest\":[{\"lot\":\"A1\",\"crates\":53e0},{\"lot\":\"B2\",\"crates\":68e0}],\"farm\":\"South\"}"
+    },
+    {
+      "id": "M26",
+      "family": "non_target_edits",
+      "question": "What is the Consultation service capacity?",
+      "reference": "{\"service\":{\"name\":\"Consultation\",\"capacity\":29,\"note\":\"R\u00e9serv\u00e9 au public\"},\"district\":\"West\"}",
+      "equivalent": "{\"service\":{\"name\":\"Consultation\",\"capacity\":29,\"note\":\"Re\u0301serve\u0301 au public\"},\"district\":\"West\"}",
+      "altered": "{\"service\":{\"name\":\"Consultation\",\"capacity\":29,\"note\":\"Re\u0301serve\u0301 au personnel\"},\"district\":\"West\"}",
+      "unavailable_reference_candidate": "{\"service\":{\"name\":\"Consultation\",\"capacity\":29,\"note\":\"Re\u0301serve\u0301 au public\"},\"district\":\"West\"}"
+    },
+    {
+      "id": "M27",
+      "family": "non_target_edits",
+      "question": "What is the remarks value in the building-permit registry, retaining its JSON value type?",
+      "reference": "{\"registry\":{\"active\":true,\"total\":82,\"tags\":[\"public\",\"local\"],\"remarks\":null},\"record_type\":\"building-permits\"}",
+      "equivalent": "{\n  \"record_type\": \"building-permits\",\n  \"registry\": {\n    \"remarks\": null,\n    \"tags\": [\n      \"public\",\n      \"local\"\n    ],\n    \"total\": 82,\n    \"active\": true\n  }\n}",
+      "altered": "{\n  \"record_type\": \"building-permits\",\n  \"registry\": {\n    \"review_status\": \"pending\",\n    \"remarks\": null,\n    \"tags\": [\n      \"public\",\n      \"local\"\n    ],\n    \"total\": 82,\n    \"active\": true\n  }\n}",
+      "unavailable_reference_candidate": "{\n  \"record_type\": \"building-permits\",\n  \"registry\": {\n    \"remarks\": null,\n    \"tags\": [\n      \"public\",\n      \"local\"\n    ],\n    \"total\": 82,\n    \"active\": true\n  }\n}"
+    },
+    {
+      "id": "M28",
+      "family": "combined",
+      "question": "How many libraries are listed in the North region?",
+      "reference": "{\"regions\":[{\"name\":\"North\",\"facilities\":{\"libraries\":9,\"centres\":4}},{\"name\":\"South\",\"facilities\":{\"libraries\":6,\"centres\":3}}],\"year\":2025}",
+      "equivalent": "{\n  \"year\": 2025.0,\n  \"regions\": [\n    {\n      \"facilities\": {\n        \"centres\": 4.0,\n        \"libraries\": 9.0\n      },\n      \"name\": \"North\"\n    },\n    {\n      \"facilities\": {\n        \"centres\": 3.0,\n        \"libraries\": 6.0\n      },\n      \"name\": \"South\"\n    }\n  ]\n}",
+      "altered": "{\n  \"year\": 2025.0,\n  \"regions\": [\n    {\n      \"facilities\": {\n        \"centres\": 4.0,\n        \"libraries\": 10.0\n      },\n      \"name\": \"North\"\n    },\n    {\n      \"facilities\": {\n        \"centres\": 3.0,\n        \"libraries\": 6.0\n      },\n      \"name\": \"South\"\n    }\n  ]\n}",
+      "unavailable_reference_candidate": "{\n  \"year\": 2025.0,\n  \"regions\": [\n    {\n      \"facilities\": {\n        \"centres\": 4.0,\n        \"libraries\": 9.0\n      },\n      \"name\": \"North\"\n    },\n    {\n      \"facilities\": {\n        \"centres\": 3.0,\n        \"libraries\": 6.0\n      },\n      \"name\": \"South\"\n    }\n  ]\n}"
+    },
+    {
+      "id": "M29",
+      "family": "combined",
+      "question": "What is the R\u00e9\u00e9ducation service capacity at Est clinic?",
+      "reference": "{\"services\":[{\"name\":\"R\u00e9\u00e9ducation\",\"capacity\":32,\"details\":{\"location\":\"B\u00e2timent A\",\"contact\":\"accueil\"}},{\"name\":\"Conseil\",\"capacity\":21}],\"clinic\":\"Est\"}",
+      "equivalent": "{\"clinic\":\"Est\",\"services\":[{\"details\":{\"contact\":\"accueil\",\"location\":\"Ba\\u0302timent A\"},\"capacity\":32,\"name\":\"Re\\u0301e\\u0301ducation\"},{\"capacity\":21,\"name\":\"Conseil\"}]}",
+      "altered": "{\"clinic\":\"Est\",\"services\":[{\"details\":{\"contact\":\"bureau\",\"location\":\"Ba\\u0302timent A\"},\"capacity\":32,\"name\":\"Re\\u0301e\\u0301ducation\"},{\"capacity\":21,\"name\":\"Conseil\"}]}",
+      "unavailable_reference_candidate": "{\"clinic\":\"Est\",\"services\":[{\"details\":{\"contact\":\"accueil\",\"location\":\"Ba\\u0302timent A\"},\"capacity\":32,\"name\":\"Re\\u0301e\\u0301ducation\"},{\"capacity\":21,\"name\":\"Conseil\"}]}"
+    },
+    {
+      "id": "M30",
+      "family": "combined",
+      "question": "What seedling capacity is recorded for nursery bed R00?",
+      "reference": "{\"registry\":{\"region\":\"R\u00e9gion Est\",\"records\":[{\"code\":\"R00\",\"capacity\":11,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R01\",\"capacity\":14,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R02\",\"capacity\":17,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R03\",\"capacity\":20,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}},{\"code\":\"R04\",\"capacity\":23,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R05\",\"capacity\":26,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R06\",\"capacity\":29,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R07\",\"capacity\":32,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}},{\"code\":\"R08\",\"capacity\":35,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R09\",\"capacity\":38,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R10\",\"capacity\":41,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R11\",\"capacity\":44,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}},{\"code\":\"R12\",\"capacity\":47,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R13\",\"capacity\":50,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R14\",\"capacity\":53,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R15\",\"capacity\":56,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}},{\"code\":\"R16\",\"capacity\":59,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R17\",\"capacity\":62,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R18\",\"capacity\":65,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R19\",\"capacity\":68,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}},{\"code\":\"R20\",\"capacity\":71,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":0}},{\"code\":\"R21\",\"capacity\":74,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":1}},{\"code\":\"R22\",\"capacity\":77,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":2}},{\"code\":\"R23\",\"capacity\":80,\"details\":{\"status\":\"valid\u00e9\",\"reserve\":3}}]},\"release\":2,\"nursery\":\"seedling-beds\"}",
+      "equivalent": "{\"nursery\":\"seedling-beds\",\"release\":2e0,\"registry\":{\"records\":[{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":11e0,\"code\":\"R00\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":14e0,\"code\":\"R01\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":17e0,\"code\":\"R02\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":20e0,\"code\":\"R03\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":23e0,\"code\":\"R04\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":26e0,\"code\":\"R05\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":29e0,\"code\":\"R06\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":32e0,\"code\":\"R07\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":35e0,\"code\":\"R08\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":38e0,\"code\":\"R09\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":41e0,\"code\":\"R10\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":44e0,\"code\":\"R11\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":47e0,\"code\":\"R12\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":50e0,\"code\":\"R13\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":53e0,\"code\":\"R14\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":56e0,\"code\":\"R15\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":59e0,\"code\":\"R16\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":62e0,\"code\":\"R17\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":65e0,\"code\":\"R18\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":68e0,\"code\":\"R19\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":71e0,\"code\":\"R20\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":74e0,\"code\":\"R21\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":77e0,\"code\":\"R22\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":80e0,\"code\":\"R23\"}],\"region\":\"Re\\u0301gion Est\"}}",
+      "altered": "{\"nursery\":\"seedling-beds\",\"release\":2e0,\"registry\":{\"records\":[{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":11e0,\"code\":\"R00\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":14e0,\"code\":\"R01\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":17e0,\"code\":\"R02\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":20e0,\"code\":\"R03\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":23e0,\"code\":\"R04\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":26e0,\"code\":\"R05\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":29e0,\"code\":\"R06\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":32e0,\"code\":\"R07\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":35e0,\"code\":\"R08\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":38e0,\"code\":\"R09\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":41e0,\"code\":\"R10\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":44e0,\"code\":\"R11\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":47e0,\"code\":\"R12\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":50e0,\"code\":\"R13\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":53e0,\"code\":\"R14\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":56e0,\"code\":\"R15\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":59e0,\"code\":\"R16\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":62e0,\"code\":\"R17\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":65e0,\"code\":\"R18\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":68e0,\"code\":\"R19\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":71e0,\"code\":\"R20\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":74e0,\"code\":\"R21\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":77e0,\"code\":\"R22\"},{\"details\":{\"reserve\":9e0,\"status\":\"valide\\u0301\"},\"capacity\":80e0,\"code\":\"R23\"}],\"region\":\"Re\\u0301gion Est\"}}",
+      "unavailable_reference_candidate": "{\"nursery\":\"seedling-beds\",\"release\":2e0,\"registry\":{\"records\":[{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":11e0,\"code\":\"R00\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":14e0,\"code\":\"R01\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":17e0,\"code\":\"R02\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":20e0,\"code\":\"R03\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":23e0,\"code\":\"R04\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":26e0,\"code\":\"R05\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":29e0,\"code\":\"R06\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":32e0,\"code\":\"R07\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":35e0,\"code\":\"R08\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":38e0,\"code\":\"R09\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":41e0,\"code\":\"R10\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":44e0,\"code\":\"R11\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":47e0,\"code\":\"R12\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":50e0,\"code\":\"R13\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":53e0,\"code\":\"R14\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":56e0,\"code\":\"R15\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":59e0,\"code\":\"R16\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":62e0,\"code\":\"R17\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":65e0,\"code\":\"R18\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":68e0,\"code\":\"R19\"},{\"details\":{\"reserve\":0e0,\"status\":\"valide\\u0301\"},\"capacity\":71e0,\"code\":\"R20\"},{\"details\":{\"reserve\":1e0,\"status\":\"valide\\u0301\"},\"capacity\":74e0,\"code\":\"R21\"},{\"details\":{\"reserve\":2e0,\"status\":\"valide\\u0301\"},\"capacity\":77e0,\"code\":\"R22\"},{\"details\":{\"reserve\":3e0,\"status\":\"valide\\u0301\"},\"capacity\":80e0,\"code\":\"R23\"}],\"region\":\"Re\\u0301gion Est\"}}"
+    },
+    {
+      "id": "D01",
+      "family": "trailing_zeros",
+      "question": "What is the temperature as a JSON number?",
+      "reference": "{\"sensor\":\"north\",\"temperature\":21.5,\"unit\":\"C\"}",
+      "equivalent": "{\"unit\":\"C\",\"temperature\":21.500,\"sensor\":\"north\"}",
+      "altered": "{\"unit\":\"C\",\"temperature\":21.6,\"sensor\":\"north\"}",
+      "unavailable_reference_candidate": "{\"unit\":\"C\",\"temperature\":21.500,\"sensor\":\"north\"}"
+    },
+    {
+      "id": "D02",
+      "family": "negative_exponents",
+      "question": "What is the balance as a JSON number?",
+      "reference": "{\"account\":\"east\",\"balance\":-12.75,\"memo\":\"pending\"}",
+      "equivalent": "{\"memo\":\"pending\",\"balance\":-1275e-2,\"account\":\"east\"}",
+      "altered": "{\"memo\":\"reviewed\",\"balance\":-1275e-2,\"account\":\"east\"}",
+      "unavailable_reference_candidate": "{\"memo\":\"pending\",\"balance\":-1275e-2,\"account\":\"east\"}"
+    },
+    {
+      "id": "D03",
+      "family": "decimal_tenth",
+      "question": "What is the ratio as a JSON number?",
+      "reference": "{\"ratio\":0.1,\"source\":\"survey\"}",
+      "equivalent": "{\"source\":\"survey\",\"ratio\":1e-1}",
+      "altered": "{\"source\":\"survey\",\"ratio\":0.1001}",
+      "unavailable_reference_candidate": "{\"source\":\"survey\",\"ratio\":1e-1}"
+    },
+    {
+      "id": "D04",
+      "family": "small_magnitude",
+      "question": "What is the concentration as a JSON number?",
+      "reference": "{\"concentration\":0.0000001,\"unit\":\"mol/L\"}",
+      "equivalent": "{\"unit\":\"mol/L\",\"concentration\":1e-7}",
+      "altered": "{\"unit\":\"mol/L\",\"concentration\":1.1e-7}",
+      "unavailable_reference_candidate": "{\"unit\":\"mol/L\",\"concentration\":1e-7}"
+    },
+    {
+      "id": "D05",
+      "family": "nested_nfc_values",
+      "question": "What is the price as a JSON number?",
+      "reference": "{\"item\":{\"name\":\"caf\u00e9\",\"price\":1.5},\"stock\":7}",
+      "equivalent": "{\"stock\":7,\"item\":{\"price\":15e-1,\"name\":\"cafe\u0301\"}}",
+      "altered": "{\"stock\":7,\"item\":{\"price\":16e-1,\"name\":\"cafe\u0301\"}}",
+      "unavailable_reference_candidate": "{\"stock\":7,\"item\":{\"price\":15e-1,\"name\":\"cafe\u0301\"}}"
+    },
+    {
+      "id": "D06",
+      "family": "nfc_keys_non_target_change",
+      "question": "What is the rate under the measurements entry as a JSON number?",
+      "reference": "{\"measurements\":{\"r\u00e9sum\u00e9\":{\"rate\":2.5}},\"verified\":false}",
+      "equivalent": "{\"verified\":false,\"measurements\":{\"re\u0301sume\u0301\":{\"rate\":2.500}}}",
+      "altered": "{\"verified\":true,\"measurements\":{\"re\u0301sume\u0301\":{\"rate\":2.500}}}",
+      "unavailable_reference_candidate": "{\"verified\":false,\"measurements\":{\"re\u0301sume\u0301\":{\"rate\":2.500}}}"
+    }
+  ]
+}

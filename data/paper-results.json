@@ -1,0 +1,58 @@
+{
+  "materials": 36,
+  "trials": 5832,
+  "results": {
+    "faithful": {
+      "A": {
+        "count": 119,
+        "n": 648,
+        "percent": 18.364197530864196
+      },
+      "B": {
+        "count": 185,
+        "n": 648,
+        "percent": 28.549382716049383
+      },
+      "C": {
+        "count": 640,
+        "n": 648,
+        "percent": 98.76543209876543
+      }
+    },
+    "altered": {
+      "A": {
+        "count": 427,
+        "n": 648,
+        "percent": 65.89506172839506
+      },
+      "B": {
+        "count": 608,
+        "n": 648,
+        "percent": 93.82716049382717
+      },
+      "C": {
+        "count": 631,
+        "n": 648,
+        "percent": 97.37654320987654
+      }
+    },
+    "insufficient_evidence": {
+      "A": {
+        "count": 643,
+        "n": 648,
+        "percent": 99.22839506172839
+      },
+      "B": {
+        "count": 645,
+        "n": 648,
+        "percent": 99.53703703703704
+      },
+      "C": {
+        "count": 645,
+        "n": 648,
+        "percent": 99.53703703703704
+      }
+    }
+  },
+  "aggregation": "All distinct selected main and decimal slots; bridge excluded. Counts summed before rate calculation. Source implementation versions and selection provenance retained in underlying records."
+}

@@ -1,0 +1,33 @@
+{
+  "observed_model_ids": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5",
+    "claude-sonnet-5-5",
+    "gpt-5.6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra"
+  ],
+  "configured_model_ids": {
+    "gpt_small": "gpt-5.6-luna",
+    "gpt_mid": "gpt-5.6-terra",
+    "gpt_large": "gpt-5.6-sol",
+    "claude_small": "claude-haiku-5-5",
+    "claude_mid": "claude-sonnet-5-5",
+    "claude_large": "claude-opus-5-5"
+  },
+  "rfc8785_version": "0.1.4",
+  "implementation_profile": "nfc-jcs-decimal-checked-sha256-v2",
+  "legacy_execution_profile": "nfc-jcs-sha256-v1",
+  "material_repeats": 3,
+  "execution": "isolated Docker agents, authenticated DataFacts gateway and A2A",
+  "numeric_guarantee": "original-token exact parsing plus post-JCS exact-value guard; unsupported precision not a mismatch",
+  "protocol_recorded_settings": {
+    "reasoning_effort": "low",
+    "sampling": "provider defaults, as in original experiment",
+    "max_model_calls_per_trial": 6,
+    "max_tool_calls_per_trial": 16,
+    "max_completion_tokens": 1600,
+    "route_model_fallback": false
+  },
+  "claim_boundary": "Protocol settings not automatically asserted for all retained historical executions; verify actual request evidence before manuscript claims."
+}

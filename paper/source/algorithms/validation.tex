@@ -1,0 +1,29 @@
+% Approved compact algorithm, source-mapped to decimal_extension.
+\begin{minipage}{\columnwidth}
+\fontsize{8}{9.5}\selectfont
+\noindent\textbf{Algorithm \thealgorithm. Serialization-invariant JSON validation}\par
+\vspace{3pt}\hrule\vspace{4pt}
+\noindent\textbf{Input:} Original JSON bytes $B$; owner's reference record $R$.\par
+\noindent\textbf{Output:} Status, comparison evidence, or failure reason.\par
+\vspace{3pt}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{@{}r@{\hspace{5pt}}p{\dimexpr\columnwidth-16pt\relax}@{}}
+1 & $q \gets \operatorname{CheckReference}(R)$ \\
+2 & \textbf{if} $q$ failed: \textbf{return} its status and reason \\
+3 & \textbf{try} \\
+4 & \quad $x \gets \operatorname{ParseExact}(B)$ \\
+5 & \quad $y \gets \operatorname{NFCRecursive}(x)$ \\
+6 & \quad $b \gets \operatorname{JCS}(\operatorname{PrepareNumbers}(y))$ \\
+7 & \quad $z \gets \operatorname{ParseExact}(b)$ \\
+8 & \quad \textbf{if not} $\operatorname{EqualExact}(y,z)$: \\
+9 & \qquad \textbf{raise} \texttt{NUMBER\_PRECISION\_LOSS} \\
+10 & \quad $h \gets \operatorname{SHA256}(b)$ \\
+11 & \textbf{catch} processing failure $e$: \\
+12 & \quad \textbf{return} $\operatorname{Classify}(e)$ and its reason \\
+13 & $h_{\mathrm{ref}} \gets R.\mathrm{identifier}$ \\
+14 & $s \gets \texttt{match}$ if $h=h_{\mathrm{ref}}$; else \texttt{mismatch} \\
+15 & \textbf{return} $(s,h_{\mathrm{ref}},h)$ with reference and profile \\
+\end{tabular}
+\vspace{4pt}\hrule
+\end{minipage}

@@ -1,0 +1,108 @@
+{
+  "release": "v1.0.0",
+  "basis": "Final 2026-10-17 manuscript and retained analysis",
+  "files": [
+    {
+      "path": "decimal_extension/__init__.py",
+      "source": "custody_datafacts/decimal_extension/__init__.py",
+      "sha256": "e663f97288c84e6ff7624b90b0e1a27ff294383cc2451bfe43f1f755ab8ad7ac",
+      "transformation": "none"
+    },
+    {
+      "path": "decimal_extension/integrity.py",
+      "source": "custody_datafacts/decimal_extension/integrity.py",
+      "sha256": "072216ef1498856493fc080f2feda864712796936e4131c0676147238cbd8f1d",
+      "transformation": "none"
+    },
+    {
+      "path": "decimal_extension/profile.py",
+      "source": "custody_datafacts/decimal_extension/profile.py",
+      "sha256": "b770cf8980a5721f04d4f863e695b4a40d3783383febe289d70d14232350b48f",
+      "transformation": "none"
+    },
+    {
+      "path": "vendor/canon/canon.py",
+      "source": "custody_datafacts/vendor/canon/canon.py",
+      "sha256": "48d6ad1c92a292b1979ef05bc3010007ba0120e5da0d3be5f3f4f9b77902eb8d",
+      "transformation": "none"
+    },
+    {
+      "path": "vendor/canon/NOTICE",
+      "source": "custody_datafacts/vendor/canon/NOTICE",
+      "sha256": "a0bcd14bd965d505ab1a2c94b3e5f652d2b75422dbc845cd519405e47123198a",
+      "transformation": "none"
+    },
+    {
+      "path": "vendor/canon/CANON_PROVENANCE",
+      "source": "custody_datafacts/vendor/canon/CANON_PROVENANCE",
+      "sha256": "9d9a59069f6d5de22b573761135a151327bf2397c9c2fca277756661bd9f7750",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/recipe.py",
+      "source": "custody_datafacts/vendor/datafacts/recipe.py",
+      "sha256": "1e5391ada2e3ff86bbd945186a992092b8f205c74cf05f32f50c3876ba047bfb",
+      "transformation": "none"
+    },
+    {
+      "path": "data/materials.json",
+      "source": "custody_datafacts/reviews/experiment-cases-20261017.json",
+      "sha256": "33198c94b90223a659c15a539efbebc1282b7192d20d3423a26d200e2cfeb95e",
+      "transformation": "none"
+    },
+    {
+      "path": "data/paper-results.json",
+      "source": "custody_datafacts/reviews/experiment-unified-results-20261017.json",
+      "sha256": "2bef4520f92b0b2ec19536ca179b0ed093de1ae502de6f980a03cd22033e4a31",
+      "transformation": "none"
+    },
+    {
+      "path": "data/trials.csv",
+      "source": "custody_datafacts/analysis/reviewer-strengthening-20261017-v1/unified-trial-view.csv",
+      "sha256": "c0d9ee65a7546649fd73fde546e1ba2180dedb8c3b43ab9442d33b2f94242604",
+      "transformation": "none"
+    },
+    {
+      "path": "data/bootstrap-intervals.json",
+      "source": "custody_datafacts/analysis/reviewer-strengthening-20261017-v1/bootstrap-intervals.json",
+      "sha256": "d317dd8491866cb3bad3239e64426c5d4e1b12f6ed7850c40307fafba7c57781",
+      "transformation": "none"
+    },
+    {
+      "path": "data/reproducibility-metadata.json",
+      "source": "custody_datafacts/analysis/reviewer-strengthening-20261017-v1/reproducibility-metadata.json",
+      "sha256": "270d67cd44a30eff3ccc6e1e2ec7da68420bdfd901942a0e7856f67d4648d953",
+      "transformation": "none"
+    },
+    {
+      "path": "data/deterministic-component-probes.json",
+      "source": "custody_datafacts/analysis/reviewer-strengthening-20261017-v1/deterministic-component-probes.json",
+      "sha256": "ea2902583f0062941b7f722145fae458452d395e97ac5ca8a0c36fc3623bf77e",
+      "transformation": "none"
+    },
+    {
+      "path": "paper/author-manuscript.pdf",
+      "source": "submission-packages/arxiv-20261017/arxiv-6819.pdf",
+      "sha256": "5427d080b7ae1a5eba0fd6a9a035726f46e2869bc6e7769afab1529a4df2fa88",
+      "transformation": "none"
+    },
+    {
+      "path": "paper/source/main.tex",
+      "source": "submission-packages/arxiv-20261017/6819/main.tex",
+      "sha256": "12ece4c3c4978a35628223427fd1d66494535359f3e4f68bf1beaf73e263ba40",
+      "transformation": "none"
+    },
+    {
+      "path": "paper/source/algorithms/validation.tex",
+      "source": "submission-packages/arxiv-20261017/6819/algorithms/validation.tex",
+      "sha256": "a706a6f033e0d5369b781d29007c81e2147c4aab4a49e4eeb324f78cccf0fe37",
+      "transformation": "none"
+    },
+    {
+      "path": "paper/source/figures/fig1_identity.pdf",
+      "source": "submission-packages/arxiv-20261017/6819/figures/fig1_identity.pdf",
+      "sha256": "01343d46e3f637b4cdd15138fa734c3354514226f2be8dcb7ae8ac0ec1f11848",
+      "transformation": "none"
+    }
+  ]
+}

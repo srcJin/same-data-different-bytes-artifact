@@ -1,0 +1,8 @@
+Same Data, Different Bytes — public supplementary artifact
+Jin Gao and Maura Clark, 2026.
+
+This release derives from the authors' existing Apache-2.0 research project.
+The canonicalization core in vendor/canon/canon.py is authored by Maura Clark
+and retained byte for byte with its original NOTICE and provenance.
+The rfc8785 Python dependency is separately distributed under its own license.
+The manuscript and figures retain their applicable publication rights.

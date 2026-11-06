@@ -1,0 +1,74 @@
+{
+  "control": "Python standard JSON binary64 parsing followed by RFC8785 JCS, without NFC or the exact-decimal guard",
+  "warning": "This control illustrates pipeline differences; JCS specifies binary64 serialization, and does not promise arbitrary original-decimal preservation",
+  "rfc8785_version": "0.1.4",
+  "results": [
+    {
+      "case": "numeric_spelling",
+      "left": "{\"v\":0.1}",
+      "right": "{\"v\":1e-1}",
+      "ordinary_binary64_parse_then_jcs_match": true,
+      "checked_left": {
+        "status": "supported",
+        "identifier": "8ec9c466832e74cab1700269790aa649b06fb67989ecf3ac8e6e3c2e5cde2b3a",
+        "serialized_json": "{\"v\":0.1}"
+      },
+      "checked_right": {
+        "status": "supported",
+        "identifier": "8ec9c466832e74cab1700269790aa649b06fb67989ecf3ac8e6e3c2e5cde2b3a",
+        "serialized_json": "{\"v\":0.1}"
+      },
+      "checked_match": true
+    },
+    {
+      "case": "unicode_form",
+      "left": "{\"label\":\"Café\"}",
+      "right": "{\"label\":\"Café\"}",
+      "ordinary_binary64_parse_then_jcs_match": false,
+      "checked_left": {
+        "status": "supported",
+        "identifier": "d4ae0caadbc69f7abfcb39e11565043c49a493e3245149935d0e59d487e73562",
+        "serialized_json": "{\"label\":\"Café\"}"
+      },
+      "checked_right": {
+        "status": "supported",
+        "identifier": "d4ae0caadbc69f7abfcb39e11565043c49a493e3245149935d0e59d487e73562",
+        "serialized_json": "{\"label\":\"Café\"}"
+      },
+      "checked_match": true
+    },
+    {
+      "case": "numeric_change",
+      "left": "{\"v\":0.1}",
+      "right": "{\"v\":0.1001}",
+      "ordinary_binary64_parse_then_jcs_match": false,
+      "checked_left": {
+        "status": "supported",
+        "identifier": "8ec9c466832e74cab1700269790aa649b06fb67989ecf3ac8e6e3c2e5cde2b3a",
+        "serialized_json": "{\"v\":0.1}"
+      },
+      "checked_right": {
+        "status": "supported",
+        "identifier": "c983ce1b78b2ca1b2e90aadb85edb2a610448fa4167574241b232bc2a61ebda2",
+        "serialized_json": "{\"v\":0.1001}"
+      },
+      "checked_match": false
+    },
+    {
+      "case": "lossy_boundary",
+      "left": "{\"v\":0.1}",
+      "right": "{\"v\":0.10000000000000001}",
+      "ordinary_binary64_parse_then_jcs_match": true,
+      "checked_left": {
+        "status": "supported",
+        "identifier": "8ec9c466832e74cab1700269790aa649b06fb67989ecf3ac8e6e3c2e5cde2b3a",
+        "serialized_json": "{\"v\":0.1}"
+      },
+      "checked_right": {
+        "status": "unsupported",
+        "reason": "NUMBER_PRECISION_LOSS"
+      },
+      "checked_match": null
+    }
+  ]
+}
